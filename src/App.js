@@ -2,11 +2,13 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  NavLink
+  NavLink,
+  Switch
 } from 'react-router-dom';
 
 import Events from './events/Events';
 import Details from './details/Details';
+import NotFound from './not-found/NotFound';
 
 const App = () => {
   return (
@@ -21,9 +23,12 @@ const App = () => {
           </li>
         </ul>
 
-        <Route exact path="/" component={Events} />
-        <Route path="/details/:eventId" component={Details} />
-        <Route path="/about" render={() => <p>Ta super strona zawiera super wydarzenia z branży IT!</p>} />
+        <Switch>
+          <Route exact path="/" component={Events} />
+          <Route path="/details/:eventId" component={Details} />
+          <Route path="/about" render={() => <p>Ta super strona zawiera super wydarzenia z branży IT!</p>} />
+          <Route component={NotFound} />
+        </Switch>
       </div>
     </Router>
   )
