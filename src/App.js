@@ -7,7 +7,6 @@ import {
 } from 'react-router-dom';
 
 import Events from './events/Events';
-import Details from './details/Details';
 import NotFound from './not-found/NotFound';
 
 const App = () => {
@@ -25,7 +24,7 @@ const App = () => {
 
         <Switch>
           <Route exact path="/" component={Events} />
-          <Route path="/details/:eventId" component={Details} />
+          <Route path="/details" component={Events} />
           <Route path="/about" render={() => <p>Ta super strona zawiera super wydarzenia z branży IT!</p>} />
           <Route component={NotFound} />
         </Switch>
