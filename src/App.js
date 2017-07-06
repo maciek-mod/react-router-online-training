@@ -10,7 +10,7 @@ const App = () => {
   return (
     <Router>
       <div>
-        <Route to="/" component={Events} />
+        <Route path="/" component={Events} />
       </div>
     </Router>
   )
