@@ -13,6 +13,7 @@ const App = () => {
       <div>
         <Route exact path="/" component={Events} />
         <Route path="/details/:eventId" component={Details} />
+        <Route path="/about" render={() => <p>Ta super strona zawiera super wydarzenia z branży IT!</p>} />
       </div>
     </Router>
   )
