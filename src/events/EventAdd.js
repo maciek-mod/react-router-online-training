@@ -26,10 +26,7 @@ EventAdd.propTypes = {
   placeValid: PropTypes.bool.isRequired,
   dateValid: PropTypes.bool.isRequired,
   timeValid: PropTypes.bool.isRequired,
-  onNameChange: PropTypes.func.isRequired,
-  onPlaceChange: PropTypes.func.isRequired,
-  onDateChange: PropTypes.func.isRequired,
-  onTimeChange: PropTypes.func.isRequired,
+  onFieldChange: PropTypes.func.isRequired,
   onFormSubmit: PropTypes.func.isRequired
 };
 
