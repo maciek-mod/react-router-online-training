@@ -8,9 +8,10 @@ import {
 
 import Events from './events/Events';
 import Settings from './settings/Settings';
+import Login from './login/Login';
 import NotFound from './not-found/NotFound';
 
-const App = () => {
+const App = (props) => {
   return (
     <Router>
       <div>
@@ -29,6 +30,7 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Events} />
           <Route path="/details" component={Events} />
+          <Route path="/login" component={Login} />
           <Route path="/about" render={() => <p>Ta super strona zawiera super wydarzenia z branży IT!</p>} />
           <Route path="/settings" component={Settings} />
           <Route component={NotFound} />
