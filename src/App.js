@@ -4,7 +4,7 @@ import {
   Route
 } from 'react-router-dom';
 
-import Events from '/events/Router';
+import Events from './events/Events';
 
 const App = () => {
   return (
@@ -15,3 +15,5 @@ const App = () => {
     </Router>
   )
 }
+
+export default App;
