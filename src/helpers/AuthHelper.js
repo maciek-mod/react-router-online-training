@@ -1,6 +1,6 @@
 // fake auth taken from official react-router docs:
 // https://reacttraining.com/react-router/web/example/auth-workflow
-export default const authHelper = {
+const authHelper = {
   isAuthenticated: false,
   authenticate(cb) {
     this.isAuthenticated = true
@@ -11,3 +11,5 @@ export default const authHelper = {
     setTimeout(cb, 100)
   }
 }
+
+export default authHelper;
