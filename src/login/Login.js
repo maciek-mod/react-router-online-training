@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import authHelper from '../helpers/authHelper';
+import authHelper from '../helpers/AuthHelper';
 
 class Login extends React.Component {
   constructor(props) {

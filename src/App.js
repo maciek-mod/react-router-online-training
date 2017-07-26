@@ -28,11 +28,10 @@ const App = (props) => {
         </ul>
 
         <Switch>
-          <Route exact path="/" component={Events} />
-          <Route path="/details" component={Events} />
           <Route path="/login" component={Login} />
-          <Route path="/about" render={() => <p>Ta super strona zawiera super wydarzenia z branży IT!</p>} />
           <Route path="/settings" component={Settings} />
+          <Route path="/about" render={() => <p>Ta super strona zawiera super wydarzenia z branży IT!</p>} />
+          <Route path="/" component={Events} />
           <Route component={NotFound} />
         </Switch>
       </div>
