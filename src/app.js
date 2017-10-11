@@ -15,6 +15,7 @@ const App = () => {
             <div>
                 <Route exact path="/" component={Events} />
                 <Route path="/details/:eventId" component={Details} />
+                <Route path="/about" render={() => <p>Hola hola kawalerze, co u robisz?</p>} />
             </div>
         </Router>
     );
