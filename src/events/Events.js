@@ -4,10 +4,6 @@ import EventItem from './EventItem';
 import EventFilters from './EventFilters';
 import EventAdd from './EventAdd';
 
-import {
-  Link
-} from 'react-router-dom'
-
 class Events extends React.Component {
   constructor(props) {
     super(props);
@@ -130,7 +126,6 @@ class Events extends React.Component {
                   onFieldChange={this.onEventFieldChange.bind(this)}
                   onFormSubmit={this.onEventAdd.bind(this)}
         />
-        <Link to="/about">About</Link>
       </div>
     );
   }
