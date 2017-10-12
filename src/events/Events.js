@@ -3,12 +3,9 @@ import events from '../data/events';
 import EventItem from './EventItem';
 import EventFilters from './EventFilters';
 import EventAdd from './EventAdd';
+import { Route } from 'react-router-dom';
+
 import Details from '../details/Details';
-
-
-import {
-  Route
-} from 'react-router-dom'
 
 class Events extends React.Component {
   constructor(props) {
@@ -113,19 +110,24 @@ class Events extends React.Component {
 
             if (date >= Date.now() && item.name.indexOf(this.state.filter) > -1) {
               return (
-                <EventItem {...item} key={item.id} onDeleteClicked={this.onDeleteClicked.bind(this)} />
+                <EventItem {...item} match={this.props.match} key={item.id} onDeleteClicked={this.onDeleteClicked.bind(this)} />
               );
             }
 
             return null;
           })}
         </ul>
+
         <div>
-            <h1>Szczegóły</h1>
-            <Route path="/details/:eventId" component={Details} />
+          Szczegóły:
+          <Route path="/details/:eventId" component={Details} /><br />
         </div>
+
         <button onClick={this.onClearClicked.bind(this)}>Wyczyść</button>
         <EventAdd name={this.state.newName}
+                  place={this.state.newPlace}
+                  date={this.state.newDate}
+                  time={this.state.newTime}
                   nameValid={this.state.newNameValid}
                   placeValid={this.state.newPlaceValid}
                   dateValid={this.state.newDateValid}
